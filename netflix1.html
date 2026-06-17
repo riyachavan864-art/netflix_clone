@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix UI Clone</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
+
+.container{
+    width:92%;
+    margin:auto;
+    padding-top:20px;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.logo{
+    width:35px;
+    height:35px;
+    background:#e50914;
+    border-radius:8px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+}
+
+.arrow{
+    font-size:14px;
+    color:#bbb;
+}
+
+.right{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.search{
+    font-size:30px;
+}
+
+.menu{
+    display:flex;
+    gap:15px;
+}
+
+.menu a{
+    color:#ddd;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.menu a.active{
+    background:#222;
+    color:#fff;
+}
+
+.menu a:hover{
+    background:#222;
+}
+
+/* Title */
+
+.title{
+    font-size:50px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+/* Cards */
+
+.cards{
+    display:flex;
+    gap:15px;
+}
+
+.main-card{
+    flex:2;
+    position:relative;
+}
+
+.main-card img{
+    width:100%;
+    height:480px;
+    object-fit:cover;
+    border-radius:12px;
+    border:3px solid #999;
+}
+
+.small-card{
+    flex:0.65;
+}
+
+.small-card img{
+    width:100%;
+    height:480px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* Overlay */
+
+.overlay{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+}
+
+.netflix{
+    font-size:18px;
+    color:#bbb;
+    letter-spacing:4px;
+}
+
+.black{
+    font-size:58px;
+    font-weight:800;
+    line-height:0.9;
+}
+
+.badges{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+}
+
+.badge{
+    background:rgba(0,0,0,.75);
+    padding:10px 18px;
+    border-radius:12px;
+    font-size:15px;
+}
+
+/* Description */
+
+.info{
+    margin-top:20px;
+}
+
+.meta{
+    color:#ccc;
+    font-size:26px;
+    margin-bottom:10px;
+}
+
+.desc{
+    color:#ddd;
+    font-size:24px;
+    line-height:1.5;
+    max-width:1000px;
+}
+
+
+
+@media(max-width:1000px){
+
+.cards{
+    flex-direction:column;
+}
+
+.small-card{
+    display:none;
+}
+
+.main-card img{
+    height:350px;
+}
+
+.black{
+    font-size:40px;
+}
+
+.desc{
+    font-size:18px;
+}
+
+.menu{
+    display:none;
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="navbar">
+
+        <div class="left">
+            <div class="logo">😊</div>
+            <span class="arrow">▼</span>
+        </div>
+
+        <div class="right">
+            <div class="search">⌕</div>
+
+            <div class="menu">
+                <a href="#" class="active">Home</a>
+                <a href="#">Shows</a>
+                <a href="#">Movies</a>
+                <a href="#">Games</a>
+                <a href="#">My Netflix</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="title">
+        Only on Netflix
+    </div>
+
+    <div class="cards">
+
+        <div class="main-card">
+
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTcALoF0liSUYIZcUXiBYumpIRsiTEJf9P2I8HxIWUPDyGRlI1p" alt="">
+
+            <div class="overlay">
+
+                <div class="netflix">NETFLIX SERIES</div>
+
+                <div class="black">
+                    BLACK <br>
+                    MIRROR
+                </div>
+
+                <div class="badges">
+                    <div class="badge">📢 New Season</div>
+                    <div class="badge">🏆 Emmy Award Winner</div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="small-card">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQnkPI7FMrsQ9hMom0SB3D0DyRRhL7L8LeEq0E6pTZ7Z1pUMysv">
+        </div>
+
+        <div class="small-card">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRP2ymXwafx_Gn87Ci-CZuMzaROsOUW9bHLyB--4mDWqjTrP6yq">
+        </div>
+
+    </div>
+
+    <div class="info">
+
+        <div class="meta">
+            TV Dramas • 2011 • 7 Seasons • TV-MA
+        </div>
+
+        <div class="desc">
+            Twisted tales run wild in this mind-bending anthology series that
+            reveals humanity's worst traits, greatest innovations and more.
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
